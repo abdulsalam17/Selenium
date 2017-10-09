@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 
 public final class data {
 
-	public static final String server_url="https://pxme.ebricks-inc.net:4443";
+	public static final String server_url="https://pxme.test-inc.net:4443";
 	
 	public static final String user="administrator";
 	public static final String password="password";
@@ -20,7 +20,7 @@ public final class data {
 	
 	// Exchange
 	public static final String exchange_user="as";
-	public static final String exchange_email_address=exchange_user +"@ebricks-inc.net";
+	public static final String exchange_email_address=exchange_user +"@test-inc.net";
 	
 	// SMTP server 
 	public static final String smtp_server_name="SMTP";
