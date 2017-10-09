@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="suite1">
+
+	<test name="Policies">
+		<groups>
+			<run>
+				<include name="PolicyTest" />
+
+			</run>
+		</groups>
+
+		<classes>
+			<class name="TestCases.HelperTest" />
+			<class name="TestCases.ConfigureTabRelatedTest" />
+		</classes>
+	</test>
+
+
+	<test name="DeliveryGroupTest">
+		<groups>
+			<run>
+				<include name="DGTest" />
+			</run>
+		</groups>
+
+		<classes>
+			<class name="TestCases.HelperTest" />
+			<class name="TestCases.DGRelatedTest" />
+		</classes>
+	</test>
+
+
+	<test name="Settings">
+		<groups>
+			<run>
+				<include name="NotificationServerTest" />
+			</run>
+		</groups>
+
+		<classes>
+			<class name="TestCases.HelperTest" />
+			<class name="TestCases.SettingsTabRelatedTest" />
+		</classes>
+
+	</test>
+
+
+	<test name="Applicationtest">
+		<groups>
+			<run>
+				<include name="AppTest" />
+			</run>
+		</groups>
+
+		<classes>
+			<class name="TestCases.HelperTest" />
+			<class name="TestCases.AppsTabRelatedTest" />
+		</classes>
+
+	</test>
+
+
+
+	<test name="SettingsLogsTest">
+		<groups>
+			<run>
+				<include name="LogsTest" />
+			</run>
+		</groups>
+
+		<classes>
+			<class name="TestCases.HelperTest" />
+			<class name="TestCases.SettingsTabRelatedTest" />
+		</classes>
+
+	</test>
+
+	<test name="DeletePolicyTest">
+		<groups>
+			<run>
+				<include name="DeletePolicy" />
+			</run>
+		</groups>
+
+		<classes>
+			<class name="TestCases.HelperTest" />
+			<class name="TestCases.ConfigureTabRelatedTest" />
+		</classes>
+
+	</test>
+
+
+</suite>
