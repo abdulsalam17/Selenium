@@ -11,6 +11,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.AfterSuite;
 
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+
 import PageObjects.LoginPage;
 import PageObjects.MenuBarItems;
 
@@ -19,11 +22,17 @@ public class HelperTest {
 	static WebDriver driver;
 	static WebDriverWait wait;
 	static MenuBarItems menubaritems;
+	
+	ExtentReports report;
+	ExtentTest test;
 
 	@BeforeSuite  (groups = {"PolicyTest", "DGTest", "NotificationServerTest", "AppTest", "LogsTest","DeletePolicy"})	
 	public void beforeSuite() {
 
 		System.setProperty("webdriver.chrome.driver", "C:\\selenium-java-3.4.0\\chromedriver.exe");
+		report = new ExtentReports(
+				"F:\\ContenstackWorkspace\\Contentstack\\Result\\automationreport.html", true);
+		
 		driver=new ChromeDriver();
 		wait=new WebDriverWait(driver, 10);
 		driver.get(data.server_url);
@@ -32,6 +41,7 @@ public class HelperTest {
 		login("administrator", "password");
 		menubaritems=new MenuBarItems(driver);
 
+	
 	}
 
 
