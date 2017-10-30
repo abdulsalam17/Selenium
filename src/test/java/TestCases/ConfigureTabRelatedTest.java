@@ -35,7 +35,7 @@ public class ConfigureTabRelatedTest extends HelperTest {
 		//	wait.until(ExpectedConditions.elementToBeClickable(By.id("nav_configure")));
 		menubaritems.configureTab().click();
 		//devicepolicies.Clickpolicies().click();
-		
+		Thread.sleep(500);
 		//Click Add
 		wait.until(ExpectedConditions.elementToBeClickable(exchangePolicy.Clickadd()));
 		executor.executeScript("arguments[0].click();", exchangePolicy.Clickadd());
